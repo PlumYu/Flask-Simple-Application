@@ -8,18 +8,20 @@ import imutils
 import cv2
 
 
-# filename = "../static/file/20231019184625_4.png"
+# filename = "../static/UploadFile/20231019184625_4.png"
 def process_finame(filename):
-    s = "D:\\WebWithOpenCV\\web\\static\\file\\"
-    filename = s + filename[13:]
-    return filename
+    imgname = str(filename).split('\\')[-1]
+    return imgname
 
 def img_process(filename):
+
+    imgname = process_finame(filename)
     # 定义将问题编号映射到正确答案的答案键，即正确的问题编号
     ANSWER_KEY = {0: 2, 1: 4, 2: 1, 3: 0, 4: 1}
 
     #
     image = cv2.imread(filename)
+    # 输入图片灰度化
     # 输入图片灰度化
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     # 进行高斯滤波
@@ -113,4 +115,10 @@ def img_process(filename):
 
     # 计算正确率并打印得分
     score = (correct / 5.0) * 100
-    return "该答题卡的得分分数为：" + str(score)
+    # 显示原始图片和测试后的结果并显示得分
+    cv2.putText(paper, "{:.2f}%".format(score), (10, 30),
+                cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 0, 255), 2)
+    path = "static/ResultFile/" + imgname
+    cv2.imwrite(path, paper)
+
+    return imgname

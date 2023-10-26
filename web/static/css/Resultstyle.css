@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: url('../../static/bground/bg1.png');
+    background-size: cover;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom:79px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #555555;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*height: 100vh; !* 将容器的高度设置为视口高度 *!*/
+}
+
+.image-container {
+    position: relative; /* 让容器成为相对定位的父元素 */
+    display: inline-block; /* 使容器只占据其内容的空间 */
+    background-color: rgba(0, 0, 0, 0.5); /* 设置背景色为半透明的黑色 */
+    padding: 10px; /* 设置内边距，确保图片不紧贴边框 */
+}
+
+.image-preview {
+  width: 350px; /* 设置图片的宽度 */
+  height: 350px; /* 根据比例自动调整高度 */
+  border: 1px solid #ccc; /* 添加边框样式 */
+  border-radius: 5px; /* 添加圆角边框 */
+  margin: 10px; /* 设置图片之间的间距 */
+}
+
+.image-container img {
+  max-width: 50%; /* 调整图片宽度根据需要 */
+}

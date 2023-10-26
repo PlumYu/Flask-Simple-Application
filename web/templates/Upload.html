@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <img src="../static/bground/logo.png"
+         onclick="location.href='https://www.ahtcm.edu.cn/'">
+    <p style="margin-left:80px" style="color: #555555;">医药信息工程学院<br>
+                                2020 级计算机科学与技术一班<br>
+                                信息综合实训第一组作品展示-答题卡识别</p>
+    <meta charset="UTF-8">
+    <br><br><br>
+    <title>Test Processor</title>
+    <link rel = "stylesheet" href="../static/css/Uploadstyle.css">
+</head>
+
+<body>
+
+<h1>Answer Sheet Processor</h1>
+<form method="POST" action="/upload" enctype="multipart/form-data">
+    <div class="button-container">
+        <label for="image-upload" class="custom-file-upload">
+            <span>上传图片</span>
+        <input id="image-upload" type="file" name="image">
+        </label>
+        <button type="submit" class="custom-button">开始评测</button>
+    </div>
+</form>
+</body>
+</html>

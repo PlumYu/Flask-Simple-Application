@@ -15,28 +15,32 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('Upload.html')
 
 @app.route('/upload', methods = ['GET','POST'])
 def upload():
     msg = "Error"
     if request.method == "GET":
-        return render_template('index.html')
+        return render_template('Upload.html')
     elif request.method == "POST":
         if 'image' in request.files:
             f = request.files.get('image')
             random_num = random.randint(0, 100)
             filename = datetime.now().strftime("%Y%m%d%H%M%S") + "." + \
                        f.filename.rsplit('.', 1)[1]
-            file_path = basedir + "\\static\\file\\" + filename
+            file_path = basedir + "\\static\\UploadFile\\" + filename
             # file_path 上传图片存储的位置
             f.save(file_path)
             msg = img_process(file_path)
-            return msg
+            return render_template('Result.html', message=msg)
         else:
             return msg
     else:
         return msg
+
+@app.route('/result',methods = ['GET','POST'])
+def result():
+    pass
 
 if __name__ == '__main__':
     app.run(debug=True)

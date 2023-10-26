@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: url('../../static/bground/bg1.png');
+    background-size: cover;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom:79px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #555555;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #fdfdfd;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: #FFFFFF;
+    border-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+    /* text-align: center; 添加文本居中样式 */
+    /* height: 25px; 自定义高度 */
+    /* margin: 0 auto; 居中对齐 */
+}
+
+.custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 100px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 10px;
+}
