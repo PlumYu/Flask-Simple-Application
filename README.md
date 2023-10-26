@@ -25,3 +25,9 @@ At first, I just wanted to simply upload images to the web for direct recognitio
 image_processor/image_process.py  def img_process(filename): 函数是写死的，所以上传其他的图片识别不出来就会报错，这个里面可以改成您用深度学习训练之后的模型。示例图片上传之后会返回一组对照图片。
 
 Image_ Processor/image_ Process.py def img_ Process (filename): The function is written dead, so uploading other images that cannot be recognized will result in an error. This can be changed to the model you have trained with deep learning. After uploading the sample images, a set of control images will be returned.
+
+注意（note）：
+
+位于 static 文件夹下面的资源不要随意更改，否者可能会出现失效的情况，比如 css 文件， 还有 （png,jpg) 文件。
+
+Resources located under the static folder should not be changed arbitrarily, otherwise they may become invalid, such as CSS files and (png, jpg) files.
